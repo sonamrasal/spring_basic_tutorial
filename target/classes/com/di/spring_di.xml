@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- instruct spring to create of type Employee and set name field to "John 
+		Doe". Setting name requires setter method for name to be defined in Employee.
+		Bean is created using the default constructor -->
+	<bean id="maleEmployee" class="com.di.Employee">
+		<property name="name" value="John Doe"></property>
+	</bean>
+	<bean id="femaleEmployee" class="com.di.Employee">
+		<property name="name" value="Jane Doe"></property>
+	</bean>
+</beans>

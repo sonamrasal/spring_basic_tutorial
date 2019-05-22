@@ -1,0 +1,8 @@
+Creating maven archetype project using commands
+mvn archetype:generate -DgroupId=spring_basic_tutorial -DartifactId=spring_basic_tutorial -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+mvn dependency:resolve
+mvn eclipse:eclipse
+
+di
+scope
+initDestroy
