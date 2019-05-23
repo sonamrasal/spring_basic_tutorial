@@ -19,9 +19,9 @@ public class App {
 		// Employee employee = applicationContext.getBean(Employee.class);
 		Employee employee = (Employee) applicationContext
 				.getBean("maleEmployee");
-		System.out.println(employee.getName());
+		System.out.println(employee.getFName());
 		employee = (Employee) applicationContext.getBean("femaleEmployee");
-		System.out.println(employee.getName());
+		System.out.println(employee.getFName());
 
 		/*
 		 * Singleton scope - returns the same bean each time Prototype score -

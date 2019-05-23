@@ -5,14 +5,18 @@ import java.io.PrintStream;
 public class Employee {
 	private static final PrintStream CONSOLE = System.out;
 
-	private String name;
+	private String fName;
 
-	public String getName() {
-		return name;
+	public Employee() {
+		System.out.println("In Employee constructor");
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public String getFName() {
+		return fName;
+	}
+
+	public void setFName(String name) {
+		this.fName = name;
 	}
 
 	public void init() {

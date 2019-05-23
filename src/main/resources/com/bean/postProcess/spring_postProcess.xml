@@ -6,5 +6,8 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<bean class="com.bean.postProcess.DemoBean" init-method="init"></bean>
+	<!-- before and after initialization methods are called when instance of 
+		Employee is being instantiated -->
+	<bean class="com.bean.postProcess.PostProcessorDemoBean"></bean>
+	<bean class="com.initDestroy.HelloWorld" />
 </beans>

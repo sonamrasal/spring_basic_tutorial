@@ -3,14 +3,14 @@ package com.bean.postProcess;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 
-public class DemoBean implements BeanPostProcessor/*, InitializingBean*/ {
+public class PostProcessorDemoBean implements BeanPostProcessor {
 	private String message;
 	private int initializationSequenceCounter;
 
-	public DemoBean() {
+	public PostProcessorDemoBean() {
 		initializationSequenceCounter++;
 		System.out.println(initializationSequenceCounter
-				+ ": In default constructor");
+				+ ": In default constructor of BeanPostProcessor");
 	}
 
 	public void setMessage(String message) {
@@ -25,23 +25,13 @@ public class DemoBean implements BeanPostProcessor/*, InitializingBean*/ {
 		initializationSequenceCounter++;
 		System.out.println(initializationSequenceCounter
 				+ ": In post process before intialization");
-		return null;
+		return bean;
 	}
 
 	public Object postProcessAfterInitialization(Object bean, String name) {
 		System.out.println(initializationSequenceCounter
 				+ ": In post process after initialization");
-		return null;
+		return bean;
 	}
 
-	public void afterPropertiesSet() throws Exception {
-		initializationSequenceCounter++;
-		System.out.println(initializationSequenceCounter
-				+ ": In after properties set method");
-	}
-
-	public void init() {
-		initializationSequenceCounter++;
-		System.out.println(initializationSequenceCounter + ": In init-method");
-	}
 }
